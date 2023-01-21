@@ -5,14 +5,32 @@ const characters =["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","
     "/"];
 
 let password_length = 15
-let password1 = ""
-let password2 = ""
 
 
+let password1_EL = document.getElementById('password1')
+let password2_EL = document.getElementById('password2')
 function generate_password() {
-    for (let i = 0; i < password_length; i++) {
 
+    let password1 = ""
+    let password2 = ""
+
+    let random_numbers1 = []
+    let random_numbers2 = []
+
+
+    for (let i = 0; i < password_length; i++) {
+        random_numbers1.push(Math.floor(Math.random() * characters.length))
+        random_numbers2.push(Math.floor(Math.random() * characters.length))
     }
+    for (let i = 0; i < password_length; i++) {
+        password1 += characters[random_numbers1[i]]
+        password2 += characters[random_numbers2[i]]
+    }
+    password1_EL.textContent = password1
+    password2_EL.textContent = password2
+
+    console.log(random_numbers1, random_numbers2)
+    console.log(password1, password2)
 }
 
 

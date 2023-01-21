@@ -6,7 +6,7 @@ body {
 
 .container {
     background-color: #1F2937;
-    width: 40%;
+    width: 50%;
     margin: auto;
     padding: 100px 50px 50px 50px;
 
@@ -53,8 +53,12 @@ hr {
 #password_box1, #password_box2 {
     background-color: #273549;
     border-radius: 10px;
-    height: 40px;
-    width: 300px;
+    padding: 5px;
+    min-width: 200px;
+    min-height: 30px;
+}
+
+#password1, #password2 {
     color: #55F991;
     text-align: center;
 }
