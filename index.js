@@ -6,9 +6,13 @@ const characters =["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","
 
 let password_length = 15
 
-
 let password1_EL = document.getElementById('password1')
 let password2_EL = document.getElementById('password2')
+
+let passwordbox_1_EL = document.getElementById('password_box1')
+let passwordbox_2_EL = document.getElementById('password_box2')
+
+// generates two passwords of the set password length
 function generate_password() {
 
     let password1 = ""
@@ -26,11 +30,19 @@ function generate_password() {
         password1 += characters[random_numbers1[i]]
         password2 += characters[random_numbers2[i]]
     }
-    password1_EL.textContent = password1
-    password2_EL.textContent = password2
 
-    console.log(random_numbers1, random_numbers2)
-    console.log(password1, password2)
+    passwordbox_1_EL.textContent = password1
+    passwordbox_2_EL.textContent = password2
 }
 
+// copies the password in box 1
+function copy1() {
+    let copyText = document.getElementById('password_box1').textContent;
+    navigator.clipboard.writeText(copyText)
+}
 
+// copies the password in box 2
+function copy2() {
+    let copyText = document.getElementById('password_box2').textContent;
+    navigator.clipboard.writeText(copyText)
+}
