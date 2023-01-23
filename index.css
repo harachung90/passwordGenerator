@@ -2,11 +2,12 @@ body {
     margin: 0;
     background-color: #1C1C1C;
     font-family: 'Inter';
+    justify-content: center;
 }
 
 .container {
     background-color: #1F2937;
-    width: 50%;
+    width: 60%;
     margin: auto;
     padding: 100px 50px 50px 50px;
 
@@ -23,11 +24,16 @@ span {
 
 }
 
-p {
-
+.never_use, p {
     color: #D5D4D8;
     line-height: 0em;
     font-size: 20px;
+}
+
+#btn_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #generate_btn {
@@ -41,12 +47,58 @@ p {
     margin-bottom: 15px;
 }
 
+.slider_container {
+    padding-top: 20px;
+    display: grid;
+}
+
+.sliderCL {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.sliderCL:hover {
+    opacity: 1;
+}
+
+.sliderCL::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4ADF86;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+#slider {
+    margin-right: 100px;
+}
+
 hr {
     border: 1px solid #2F3E53;
 }
 
 .boxes_container {
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
+}
+
+#length {
+    line-height: 2em;
+    margin: 0px;
 }
 
 #password_box1, #password_box2 {
@@ -55,7 +107,7 @@ hr {
     padding: 5px 15px;
     min-width: 250px;
     min-height: 30px;
-    color: #55F991;
+    color: #04AA6D;
     word-wrap:break-word;
     justify-content: center;
 

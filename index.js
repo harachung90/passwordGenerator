@@ -12,8 +12,20 @@ let password2_EL = document.getElementById('password2')
 let passwordbox_1_EL = document.getElementById('password_box1')
 let passwordbox_2_EL = document.getElementById('password_box2')
 
+let slider = document.getElementById('slider')
+let output = document.getElementById('length')
+
+// gets the input from the slider
+function getInput() {
+    output.textContent = "Password length: " +  slider.value;
+    password_length = slider.value
+    console.log(password_length)
+}
+
 // generates two passwords of the set password length
 function generate_password() {
+
+
 
     let password1 = ""
     let password2 = ""
@@ -46,3 +58,4 @@ function copy2() {
     let copyText = document.getElementById('password_box2').textContent;
     navigator.clipboard.writeText(copyText)
 }
+

@@ -6,8 +6,15 @@
     <div class="container">
         <h1>Generate a <br/>
             <span>random password</span></h1>
-        <p>Never use an insecure password again.</p>
-        <button id="generate_btn" onclick="generate_password()">Generate passwords</button>
+        <p id="never_use">Never use an insecure password again.</p>
+        <div class="slider_container">
+            <input type="range" min="4" max="30" value="15" class="sliderCL" id="slider" oninput="getInput()">
+            <p id="length">Password length: 15</span></p>
+        </div>
+        <div id="btn_container">
+            <button id="generate_btn" onclick="generate_password()">Generate passwords</button>
+        </div>
+
         <hr>
         <div class="boxes_container">
             <p id="password_box1"></p>
