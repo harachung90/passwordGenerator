@@ -7,6 +7,12 @@
         <h1>Generate a <br/>
             <span>random password</span></h1>
         <p id="never_use">Never use an insecure password again.</p>
+        <br/>
+        <p style="white-space: nowrap; padding-bottom: 10px;">Lowercase alphabets are the default for the password. Add more options to make your passwords stronger! </p>
+        <input id="uppercaseOP" type="checkbox" name="uppercaseOP"><span class="checkbox_text">Uppercase</span></input>
+        <input id="numbersOP" type="checkbox" name="numbersOP"><span class="checkbox_text">Numbers</span></input>
+        <input id="symbolsOP" type="checkbox" name="symbolsOP"><span class="checkbox_text">Symbols</span></input>
+
         <div class="slider_container">
             <input type="range" min="4" max="30" value="15" class="sliderCL" id="slider" oninput="getInput()">
             <p id="length">Password length: 15</span></p>
@@ -21,7 +27,6 @@
             <button id="copy_1" onclick="copy1()">COPY</button>
             <p id="password_box2"></p>
             <button id="copy_2" onclick="copy2()">COPY</button>
-
     </div>
     <script src="index.js"></script>
 </body>
